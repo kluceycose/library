@@ -6,12 +6,12 @@ function handleAddPress(e) {
 
 function addBookToLibrary(e) {
     const bookForm = document.querySelector(".add-form");
-    console.log(bookForm);
+    // console.log(bookForm);
 
     const title = bookForm.elements.title.value;
     const author = bookForm.elements.author.value;
-    const pages = bookForm.elements.length.value;
-    console.log(pages);
+    const pages = bookForm.elements.pages.value;
+    console.log(bookForm.elements.pages);
     const read = bookForm.elements.read.checked;
 
     myLibrary.push(new Book(title, author, pages, read))
@@ -21,8 +21,8 @@ function addBookToLibrary(e) {
 }
 
 function deleteBook(e){
-    console.log(e);
-    console.log(myLibrary);
+    // console.log(e);
+    // console.log(myLibrary);
     const index = +e.target.parentNode.getAttribute("data-index");
     myLibrary = myLibrary.slice(0, index).concat(myLibrary.slice(index+1));
     console.log(myLibrary);
@@ -47,7 +47,7 @@ function render() {
     const shelf = document.querySelector(".books");
     shelf.innerHTML = "";
     for(let book in myLibrary){
-        console.log(book);
+        // console.log(book);
         const card = createCard(myLibrary[book], book);
         
         shelf.appendChild(card);
