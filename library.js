@@ -1,4 +1,4 @@
-function Book(title, author, pages, read) {
+export default function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -7,4 +7,5 @@ function Book(title, author, pages, read) {
         return `${this.title} by ${this.author}, ${this.pages} pages, ${
             this.read? "already read" : "not read yet"}`;
     }; 
+    this.toggleRead = function(){ this.read = !this.read };
 }

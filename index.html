@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <main class="main">
+        <h1 class="title">Your Library</h1>
+        <div class="add-div row">
+            <button class="add-btn">New book</button>
+            <form action="" class="add-form grid hidden">
+                <label for="title" class="">Title<br>
+                <input type="text" name="title" id="title" class="" required></label>
+                <label for="length" class="">Length<br>
+                <input type="number" name="length" id="length"> pages</label>
+                <label for="author" class="">Author<br>
+                <input type="text" name="author" id="author" class="" required></label>
+                <label for="yes" class="">Read the book
+                <input type="checkbox" name="read" id="read"></label>
+                <button type="submit" class="sbmt-btn ">Add Book</button>
+            </form>
+        </div>
+        <section class="books grid">
+
+        </section>
+        <script type="module" src="index.js"></script>
+    </main>
 </body>
 </html>
